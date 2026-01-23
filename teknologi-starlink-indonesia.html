@@ -87,6 +87,31 @@ style="max-width:100%;height:auto;" alt="Chat WhatsApp">
 
 </main>
 
-<footer class="footer">© Starlink Indonesia</footer>
+<footer class="footer">© Leosatelink - Order dan Aktivasi Starlink Indonesia</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener("selectstart", function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener("copy", function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (
+      (e.ctrlKey && ["c", "u", "s", "a"].includes(e.key.toLowerCase())) ||
+      e.key === "F12"
+    ) {
+      e.preventDefault();
+    }
+  });
+});
+</script>
+
 </body>
 </html>
