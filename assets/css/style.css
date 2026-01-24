@@ -160,5 +160,17 @@ a:hover {
   padding: 24px 0 40px;
 }
 
+/* Rapikan posisi menu agar tidak mepet tepi layar (desktop) */
+@media (min-width: 1024px) {
+  .site-header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .main-menu {
+    padding-left: 24px;
+  }
+}
+
 
 
