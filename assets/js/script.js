@@ -1,34 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
+  // cek apakah sudah ada
+  if (document.getElementById("backToTop")) return;
+
+  // buat tombol
   const btn = document.createElement("button");
 
   btn.id = "backToTop";
 
-  btn.innerHTML = `
-  <svg viewBox="0 0 24 24">
-    <path fill="white" d="M12 4l-8 8h5v8h6v-8h5z"/>
-  </svg>
-  `;
+  btn.innerHTML = "↑";
 
   document.body.appendChild(btn);
 
-  window.addEventListener("scroll", function() {
+  // tampil saat scroll
+  window.addEventListener("scroll", function () {
 
-    if (window.scrollY > 300) {
-      btn.classList.add("show");
+    if (window.scrollY > 200) {
+      btn.style.opacity = "1";
+      btn.style.visibility = "visible";
     } else {
-      btn.classList.remove("show");
+      btn.style.opacity = "0";
+      btn.style.visibility = "hidden";
     }
 
   });
 
-  btn.addEventListener("click", function() {
-
+  // klik scroll ke atas
+  btn.onclick = function () {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
-
-  });
+  };
 
 });
